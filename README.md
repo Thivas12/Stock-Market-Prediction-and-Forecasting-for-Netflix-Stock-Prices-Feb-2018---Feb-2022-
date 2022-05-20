@@ -88,7 +88,7 @@ So finally, you can predict the prices of Netflix stocks using this strategy.
 **CONCLUSION :**
 Various parameter of the LSTM model can be tweaked, such as the number of LSTM layers, the dropout value, and the number of epochs. Are the LSTM projections, however, precise enough to predict whether the stock price will rise or fall? Without the doubt.
 
-![image](https://user-images.githubusercontent.com/86511074/169577736-f7663a71-728c-4d90-bd28-43192994abfe.png)
+
 
 
 
