@@ -15,4 +15,10 @@ The central role of an LSTM model is held by a memory cell known as a ‘cell st
 
 ![image](https://user-images.githubusercontent.com/86511074/169572014-01fbd042-9d20-4e78-a2aa-a20428ca36c2.png)
 
+Information can be added to or removed from the cell state in LSTM and is regulated by gates. These gates optionally let the information flow in and out of the cell. It contains a pointwise multiplication operation and a sigmoid neural net layer that assist the mechanism.
+
+![image](https://user-images.githubusercontent.com/86511074/169572299-ad78d584-55be-4c05-9b30-aaf441010aa7.png)
+
+The sigmoid layer gives out numbers between zero and one, where zero means ‘nothing should be let through,’ and one means ‘everything should be let through.’
+
 
