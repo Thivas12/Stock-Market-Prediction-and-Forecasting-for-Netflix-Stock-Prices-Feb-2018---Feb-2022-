@@ -56,6 +56,39 @@ Whenever training Timeseries data we should divide the data differently and we s
 The training size should be 65% of the total length of the data frame, the test size should be the difference between the length of the dataset and the training size. After writing the script on the notebook, the train and test data is ready.
 
 **DATA PREPROCESSING :**
+Now consider the time steps, if I want to predict the price of the stock in a day that how previous data should be considered. Now the timestep value will be 100. Let's split the data into X,Y. In the 0th iteration the first 100 elements goes as your first record and the 101 elements will be put up in the X. The 100 elements will be put up in the Y. You can see this clearly on the notebook.
+
+**LSTM :**
+LSTMs are widely used for sequence prediciton problems and have proven to be extremely effective. The reason they work so well is that LSTM can store past important information and forget the information that is not.
+
+LSTM has three gates
+  * **The input gate :** The input gate adds information to the cell state.
+  * **The forget gate :** It removes the information that is no longer required by the model.
+  * **The output gate :** Output gate at LSTM selects the information to be shown as output.
+
+While implementing any LSTM, we should always reshape our X train in 3-D, add 1. The reason behind this is that the time step and the 1 is given to the LSTM. So after importing modules(tensorflow keras) for the stacked LSTM, we will be using a sequential model and add the layers of the LSTM. The first layer should be the time step in 1. So, now the final part will be fitting the X_train and Y_train.
+
+![image](https://user-images.githubusercontent.com/86511074/169578248-a955fb11-7c5e-46fb-9d6a-2d24810f484c.png)
+
+**PREDICTION :**
+We need to predict both the X_train and X_test. If i want to see the RMS(root mean square) performance we need to do scaler inverse transform.
+
+![image](https://user-images.githubusercontent.com/86511074/169577047-33b15884-73aa-4420-bc93-152bc947d531.png)
+
+* Green indicates the Predicted Data
+* Blue indicates the Complete Data
+* Orange indicates the Train Data
+
+If I consider the last date in the test data as of 04-02-2022, I want to predict the output for the next 30 days which is from 05-02-2022 to 03-03-2022. We need the previous 100 data for that I am taking the data and reshaping it.
+
+So finally, you can predict the prices of Netflix stocks using this strategy.
+
+![image](https://user-images.githubusercontent.com/86511074/169577753-8a6a021a-bd41-41aa-bafe-6f5ef27c9215.png)
+
+**CONCLUSION :**
+Various parameter of the LSTM model can be tweaked, such as the number of LSTM layers, the dropout value, and the number of epochs. Are the LSTM projections, however, precise enough to predict whether the stock price will rise or fall? Without the doubt.
+
+![image](https://user-images.githubusercontent.com/86511074/169577736-f7663a71-728c-4d90-bd28-43192994abfe.png)
 
 
 
