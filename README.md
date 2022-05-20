@@ -21,4 +21,41 @@ Information can be added to or removed from the cell state in LSTM and is regula
 
 The sigmoid layer gives out numbers between zero and one, where zero means ‘nothing should be let through,’ and one means ‘everything should be let through.’
 
+# DESCRIPTION
+
+Now coming into our project, lets have a timeline of how this works,
+* Loading the Data
+* Train and Test Split
+* Data Preprocessing
+* LSTM
+* Prediction 
+* Conclusion
+
+**LOADING THE DATA :**
+Netflix data is upto 04-02-2022. Let's take the close column for the stock prediction.
+
+![image](https://user-images.githubusercontent.com/86511074/169573344-6186b0d0-16ec-4a2a-991d-b14ec833270c.png)
+
+.
+.
+.
+.
+
+![image](https://user-images.githubusercontent.com/86511074/169573414-231327c6-4ab3-4c21-8266-fadaa3310d11.png)
+
+We can plot the close value graph using pyplot
+From 2018 - 2022
+
+![image](https://user-images.githubusercontent.com/86511074/169573640-74b832ee-6574-436f-a456-1e5cdf7dd5a6.png)
+
+Since LSTM is very sensitive we used MinMaxScaler to transform the values from 0 to 1. It can be seen in the notebook.
+
+**TRAIN AND TEST SPLIT :**
+Whenever training Timeseries data we should divide the data differently and we should train the data with the respective date. In time-series data the one data is dependant on other data.
+
+The training size should be 65% of the total length of the data frame, the test size should be the difference between the length of the dataset and the training size. After writing the script on the notebook, the train and test data is ready.
+
+**DATA PREPROCESSING :**
+
+
 
